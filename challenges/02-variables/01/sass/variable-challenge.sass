@@ -1,3 +1,25 @@
+/*
+  - title color
+  - button borders (both buttons)
+  - primary button background
+  - outline button text color
+  - button hover/focus shadow
+$clr-red: #da3f0b
+
+/*
+  - body color
+  - button hover/focus background
+  - shadow color on the card
+$clr-black: #201e1f
+
+/*
+  - page background
+  - primary button text color
+  - outline button background
+  - hover text color for both buttons 
+$clr-white: #f8f7f7
+
+  
 *
   box-sizing: border-box
   margin: 0
@@ -6,6 +28,7 @@ body
   font-size: 1.75rem
   font-family: system-ui, sans-serif
   line-height: 1.6
+  color: $clr-black
 
   /* this is being used to center the content on the screen */
   display: grid
@@ -17,11 +40,26 @@ body
   gap: 0.75em
   width: min(90%, 60rem)
   padding: 2em
+  border-radius: 2rem
+  box-shadow: 0 0 1rem $clr-black
+  &__title
+    color: $clr-red
 
 .btn
   display: inline-block
   padding: 0.5em 1.5em
   text-decoration: none
+  border: .2rem solid $clr-red
+  border-radius: .5rem
+  &:hover
+      background: $clr-black
+      color: $clr-white
+      box-shadow: 0 0 1rem $clr-red
+  &--primary
+    color: $clr-white
+    background: $clr-red
+  &--outline
+    color: $clr-red
 
 .flex-group
   display: flex
